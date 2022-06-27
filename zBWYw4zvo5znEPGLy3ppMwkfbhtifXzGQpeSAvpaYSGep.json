@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EBSI Verifiable Accreditation Record",
+  "description": "Schema of an EBSI Verifiable Accreditation",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://api.preprod.ebsi.eu/trusted-schemas-registry/v1/schemas/0x28d76954924d1c4747a4f1f9e3e9edc9ca965efbf8ff20e4339c2bf2323a5773"
+    },
+    {
+      "properties": {
+        "termsOfUse": {
+          "description": "Contains accreditation information about the Verifiable Accreditation",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "description": "References the Verifiable Accreditation stored as an attribute on the Trusted Issuer Registry (TIR)",
+                "type": "string",
+                "format": "uri"
+              },
+              "type": {
+                "description": "Defines type",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "type"
+            ]
+          }
+        },
+        "credentialSubject": {
+          "description": "Defines additional information about the subject that is described by the Verifiable Accreditation",
+          "type": "object",
+          "properties": {
+            "id": {
+              "description": "Defines a unique identifier of the Verifiable Attestation",
+              "type": "string",
+              "format": "uri"
+            },
+            "authorisationClaims": {
+              "description": "Defines a list of claims that define/determine the authorisation of an Issuer to issue certain types of VCs",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "authorisedSchemaId": {
+                    "description": "Schema, registered in Trusted  Schemas Registry, which the accredited organisation is allowed to issue, as per their accreditation",
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "limitJurisdiction": {
+                    "description": "Defines the jurisdiction for which the accreditation is valid",
+                    "type": "string",
+                    "format": "uri"
+                  }
+                },
+                "required": [
+                  "authorisedSchemaId"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "authorisationClaims"
+          ]
+        }
+      },
+      "required": [
+        "expirationDate",
+        "credentialSubject",
+        "termsOfUse"
+      ]
+    }
+  ]
+}
