@@ -1,5 +1,10 @@
 # alastriaid-schemas
 
+1. Access to get JWT, https://app.preprod.ebsi.eu/users-onboarding/
+2. API Access, https://api.preprod.ebsi.eu/
+3. Parsed results, https://github.com/alastria/alastria-identity-schemas/blob/main/README.md
+4. Updated documentation, https://github.com/alastria/alastria-identity-schemas/wiki
+
 ## EBSI avaiable schemas:
 * [EBSI Accredited Verifiable Attestation Record](z45Jjx5Fi39nT2TiUHJEDWV4d1eXY8Ntn8fUsMqQan9qB.json)
 * [EBSI Legal Entity Verifiable ID](z53cURBT1UbrsezMXKK6MoCVYQFyob1RPRchpo76paQ2Q.json)
