@@ -5,7 +5,7 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "../../../ebsi-attestation/2022-02/schema.json"
+      "$ref": "../../VerifiableAttestation/schema.json"
     },
     {
       "properties": {
@@ -19,14 +19,14 @@
               "format": "uri"
             },
             "familyName": {
-              "description": "Defines current family name(s) of the credential subject",
+              "description": "Defines current last name(s) of the credential subject",
               "type": "string"
             },
-            "firstName": {
+            "givenName": {
               "description": "Defines current first name(s) of the credential subject",
               "type": "string"
             },
-            "dateOfBirth": {
+            "birthDate": {
               "description": "Defines date of birth of the credential subject",
               "type": "string",
               "format": "date"
@@ -43,7 +43,7 @@
               "description": "Defines the place where the credential subjectis born",
               "type": "string"
             },
-            "currentAddress": {
+            "address": {
               "description": "Defines the current address of the credential subject",
               "type": "string"
             },
@@ -55,58 +55,7 @@
           "required": [
             "id",
             "familyName",
-            "firstName",
-            "dateOfBirth",
-            "personalIdentifier"
-          ]
-        }
-      }
-    }
-  ]
-}          "properties": {
-            "id": {
-              "description": "Defines the DID of the subject that is described by the Verifiable Attestation",
-              "type": "string",
-              "format": "uri"
-            },
-            "familyName": {
-              "description": "Defines current family name(s) of the credential subject",
-              "type": "string"
-            },
-            "firstName": {
-              "description": "Defines current first name(s) of the credential subject",
-              "type": "string"
-            },
-            "dateOfBirth": {
-              "description": "Defines date of birth of the credential subject",
-              "type": "string",
-              "format": "date"
-            },
-            "personalIdentifier": {
-              "description": "Defines the unique national identifier of the credential subject (constructed by the sending Member State in accordance with the technical specifications for the purposes of cross-border identification and which is as persistent as possible in time)",
-              "type": "string"
-            },
-            "nameAndFamilyNameAtBirth": {
-              "description": "Defines the first and the family name(s) of the credential subject at the time of their birth",
-              "type": "string"
-            },
-            "placeOfBirth": {
-              "description": "Defines the place where the credential subjectis born",
-              "type": "string"
-            },
-            "currentAddress": {
-              "description": "Defines the current address of the credential subject",
-              "type": "string"
-            },
-            "gender": {
-              "description": "Defines the gender of the credential subject",
-              "type": "string"
-            }
-          },
-          "required": [
-            "id",
-            "familyName",
-            "firstName",
+            "givenName",
             "dateOfBirth",
             "personalIdentifier"
           ]
