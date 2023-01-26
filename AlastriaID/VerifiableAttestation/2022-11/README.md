@@ -198,7 +198,7 @@ There are two types of Verifiable Attestation: Verifiable Attestation and Accred
 
 <br></br>
 
-# Credential subject
+## Credential subject
 All credential subject objects MUST contain property id. Other properties are defined in data models of use cases.
 
 <table>
@@ -223,7 +223,7 @@ All credential subject objects MUST contain property id. Other properties are de
 
 <br></br>
 
-# Credential status
+## Credential status
 
 <table>
   <tr>
@@ -257,7 +257,7 @@ All credential subject objects MUST contain property id. Other properties are de
 
 <br></br>
 
-# Credential schema 
+## Credential schema 
 
 <table>
   <tr>
@@ -292,7 +292,7 @@ All credential subject objects MUST contain property id. Other properties are de
 
 <br></br>
 
-# Evidence 
+## Evidence 
 All evidence objects MUST contain properties id and type. Other properties are defined in data models of use cases, e.g., the presence of physical documents.
 
 <table>
@@ -324,3 +324,109 @@ All evidence objects MUST contain properties id and type. Other properties are d
   </tr>
 </table>
 
+## Proof 
+
+<table>
+  <tr>
+    <th>Terminology</th>
+    <th>Description</th>
+    <th>Type</th>
+    <th>Notes</th>
+  </tr>
+
+  
+
+  <tr>
+    <td>type</td>
+    <td>
+      Defines the proof type.	 
+    </td>
+    <td>string</td>
+    <td>
+    </td>
+  </tr>
+
+<tr>
+    <td>created</td>
+    <td>
+      Defines the date and time, when the proof has been created.	 
+    </td>
+    <td>dateTime</td>
+    <td>
+    </td>
+  </tr>
+
+<tr>
+    <td>proofPurpose</td>
+    <td>
+      Defines the purpose of the proof.		 
+    </td>
+    <td>string</td>
+    <td>
+    </td>
+  </tr>
+
+
+<tr>
+    <td>verificationMethod</td>
+    <td>
+      Contains information about the verification method/proof mechanisms..
+    </td>
+    <td>string(URI)</td>
+    <td>
+    </td>
+  </tr>
+
+
+<tr>
+    <td>jws</td>
+    <td>
+      Defines the proof value in JWS signature format.	 
+    </td>
+    <td>string</td>
+    <td>
+    </td>
+  </tr>
+</table>
+
+<br><br>
+
+## Terms of use 
+Mandatory for Accredited Verifiable Attestations.<br>
+<b>MUST be equal to VerifiableAccreditation.</b>
+
+<table>
+  <tr>
+    <th>Terminology</th>
+    <th>Description</th>
+    <th>Type</th>
+    <th>Notes</th>
+  </tr>
+
+  
+
+  <tr>
+    <td>id</td>
+    <td>
+      References a record of terms of use.	 
+    </td>
+    <td>string(URI)</td>
+    <td>
+      If used for Verifiable Accreditation as in an Accredited Verifiable Attestation: References the Verifiable Accreditation stored as an attribute of the issuer in the Trusted Issuer Registry (TIR).
+    </td>
+  </tr>
+
+<tr>
+    <td>type</td>
+    <td>
+      Defines the term of use type.	 
+    </td>
+    <td>string</td>
+    <td>
+      If used for Verifiable Accreditation as in an Accredited Verifiable Attestation: MUST be equal to a VerifiableAccreditation type.
+    </td>
+  </tr>
+</table>
+
+All the fields are required except validUntil, expirationDate, credentialStatus, evidence, proof and termsOfUse.<br>
+credentialStatus and termsOfUse are required in an Accredited Verifiable Attestation.
