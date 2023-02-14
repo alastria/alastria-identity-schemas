@@ -19,7 +19,8 @@ There are two types of Verifiable Attestation: Verifiable Attestation and Accred
     <td>array&ltstring (URI)&gt</td>
     <td>
         JSON-LD contexts define terminology and identifiers for data to enable different systems, which exchange data, to “understand” each other by using the same terminology.<br><br>
-        The content of this property must be an ordered set where the first item is a URI with the value: <a href="https://www.w3.org/2018/credentials/v1">"https://www.w3.org/2018/credentials/v1"</a> (“base context”).
+        The content of this property must be an ordered set where the first item is a URI with the value: <a href="https://www.w3.org/2018/credentials/v1">"https://www.w3.org/2018/credentials/v1"</a> (“base context”).<br>
+        The types stated in the "type" field MUST go from more abstract to more concrete, being "VerifiableCredential" the first type for all credentials. This is not explicitly stated by EBSI but it's useful in order to know the concrete type for each credential.
     </td>
   </tr>
 
@@ -45,7 +46,7 @@ There are two types of Verifiable Attestation: Verifiable Attestation and Accred
     <td>array&ltstring&gt</td>
     <td>
       Every Verifiable Credential must define its type.<br><br>
-      The value of this property for a V-ID must be: 'VerifiableCredential', 'AccreditedVerifiableAttestation', 'VerifiableID'.
+      The value of this property for a V-ID must be: 'VerifiableCredential', <s>'AccreditedVerifiableAttestation'</s>, 'VerifiableID'.
     </td>
   </tr>
 
@@ -119,7 +120,7 @@ There are two types of Verifiable Attestation: Verifiable Attestation and Accred
 
 
   <tr>
-    <td>credentialStatus</td>
+    <td><s>credentialStatus</s></td>
     <td>
       Defines discovery information about the current status of a Verifiable Attestation.<br><br>
       Definition: <a href="https://www.w3.org/TR/vc-data-model/#status">https://www.w3.org/TR/vc-data-model/#status</a> 
@@ -171,27 +172,14 @@ There are two types of Verifiable Attestation: Verifiable Attestation and Accred
 
 
   <tr>
-    <td>termsOfUse</td>
+    <td><s>termsOfUse</s></td>
     <td>
       Defines the terms under which the Verifiable Attestation was issued.<br><br>
       Definition: <a href="https://www.w3.org/TR/vc-data-model/#terms-of-use">https://www.w3.org/TR/vc-data-model/#terms-of-use</a> 
     </td>
     <td>array&ltobject&gt</td>
     <td>
-      E.g., terms of use can contain information about the accreditation of the issuer of the Verifiable Attestation. Terms of use can contain one or more references to accreditations. 
-    </td>
-  </tr>
-
-
-  <tr>
-    <td>evidence</td>
-    <td>
-      Contains information about the process which resulted in the issuance of the Verifiable Attestation.<br><br>
-      Definition: <a href="https://www.w3.org/TR/vc-data-model/#evidence">https://www.w3.org/TR/vc-data-model/#evidence</a> 
-    </td>
-    <td>array&ltobject&gt</td>
-    <td>
-      Evidence can contain one or more evidence objects.
+      <s>E.g., terms of use can contain information about the accreditation of the issuer of the Verifiable Attestation. Terms of use can contain one or more references to accreditations. </s> 
     </td>
   </tr>
 </table>
@@ -225,7 +213,7 @@ All credential subject objects MUST contain property id. Other properties are de
 
 ## Credential status
 
-<table>
+<s><table>
   <tr>
     <th>Terminology</th>
     <th>Description</th>
@@ -253,7 +241,7 @@ All credential subject objects MUST contain property id. Other properties are de
       E.g., CredentialStatusList2017
     </td>
   </tr>
-</table>
+</table></s>
 
 <br></br>
 
@@ -271,7 +259,7 @@ All credential subject objects MUST contain property id. Other properties are de
     <td>id</td>
     <td>
       <s>References the credential schema (template) stored on the (relevant) Trusted Schemas Registry (TSR) on which the Verifiable Attestation is based.</s>
-      References the credential schema (template) stored on the blockchain.
+      References the credential schema (template) stored on the alastria-identity-schemas repository. This can be stored in the blockchain in the future.
     </td>
     <td>string(URI)</td>
     <td>
@@ -326,7 +314,7 @@ All evidence objects MUST contain properties id and type. Other properties are d
 
 ## Proof 
 
-<table>
+<s><table>
   <tr>
     <th>Terminology</th>
     <th>Description</th>
@@ -387,15 +375,15 @@ All evidence objects MUST contain properties id and type. Other properties are d
     <td>
     </td>
   </tr>
-</table>
+</table></s>
 
 <br><br>
 
 ## Terms of use 
-Mandatory for Accredited Verifiable Attestations.<br>
-<b>MUST be equal to VerifiableAccreditation.</b>
+<s>Mandatory for Accredited Verifiable Attestations.<br>
+<b>MUST be equal to VerifiableAccreditation.</b></s>
 
-<table>
+<s><table>
   <tr>
     <th>Terminology</th>
     <th>Description</th>
@@ -412,7 +400,7 @@ Mandatory for Accredited Verifiable Attestations.<br>
     </td>
     <td>string(URI)</td>
     <td>
-      If used for Verifiable Accreditation as in an Accredited Verifiable Attestation: References the Verifiable Accreditation stored as an attribute of the issuer in the Trusted Issuer Registry (TIR).
+      <s>If used for Verifiable Accreditation as in an Accredited Verifiable Attestation: References the Verifiable Accreditation stored as an attribute of the issuer in the Trusted Issuer Registry (TIR).</s> 
     </td>
   </tr>
 
@@ -423,10 +411,12 @@ Mandatory for Accredited Verifiable Attestations.<br>
     </td>
     <td>string</td>
     <td>
-      If used for Verifiable Accreditation as in an Accredited Verifiable Attestation: MUST be equal to a VerifiableAccreditation type.
+      <s>If used for Verifiable Accreditation as in an Accredited Verifiable Attestation: MUST be equal to a VerifiableAccreditation type.</s> 
     </td>
   </tr>
-</table>
+</table></s>
+
+<br>
 
 All the fields are required except validUntil, expirationDate, credentialStatus, evidence, proof and termsOfUse.<br>
 credentialStatus and termsOfUse are required in an Accredited Verifiable Attestation.
