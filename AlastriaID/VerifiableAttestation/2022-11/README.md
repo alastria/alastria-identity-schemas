@@ -9,6 +9,7 @@ There are two types of Verifiable Attestation: Verifiable Attestation and Accred
     <th>Description</th>
     <th>Type</th>
     <th>Notes</th>
+    <th>Required</th>
   </tr>
 
   <tr>
@@ -90,6 +91,7 @@ There are two types of Verifiable Attestation: Verifiable Attestation and Accred
       The "validUntil" property will replace expirationDate in the future.<br><br>
       Format:  <a href="https://datatracker.ietf.org/doc/html/rfc3339">https://datatracker.ietf.org/doc/html/rfc3339</a>
     </td>
+    <td>No</td>
   </tr>
 
   <tr>
@@ -104,6 +106,7 @@ There are two types of Verifiable Attestation: Verifiable Attestation and Accred
       If present, the value of this property must be a combined date and time string.<br><br>
       Format: <a href="https://www.w3.org/TR/vc-data-model/#expiration">https://datatracker.ietf.org/doc/html/rfc3339</a>  
     </td>
+    <td>No</td>
   </tr>
 
 
@@ -129,6 +132,7 @@ There are two types of Verifiable Attestation: Verifiable Attestation and Accred
     <td>object</td>
     <td>
     </td>
+    <td>No</td>
   </tr>
 
 
@@ -154,6 +158,7 @@ There are two types of Verifiable Attestation: Verifiable Attestation and Accred
     <td>
       Evidence can contain one or more evidence objects.
     </td>
+    <td>No</td>
   </tr>
 
   <tr>
@@ -169,6 +174,7 @@ There are two types of Verifiable Attestation: Verifiable Attestation and Accred
       For more information about proofs, check: E-signing and e-sealing Verifiable Credentials and Verifiable Presentations<br><br>
       This proof field is optional because the proof can be external instead of internal. 
     </td>
+    <td>No</td>
   </tr>
 
 
@@ -182,6 +188,7 @@ There are two types of Verifiable Attestation: Verifiable Attestation and Accred
     <td>
       <s>E.g., terms of use can contain information about the accreditation of the issuer of the Verifiable Attestation. Terms of use can contain one or more references to accreditations. </s> 
     </td>
+    <td>No</td>
   </tr>
 </table>
 
