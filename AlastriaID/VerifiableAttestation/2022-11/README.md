@@ -19,8 +19,7 @@ There are two types of Verifiable Attestation: Verifiable Attestation and Accred
     <td>array&ltstring (URI)&gt</td>
     <td>
         JSON-LD contexts define terminology and identifiers for data to enable different systems, which exchange data, to “understand” each other by using the same terminology.<br><br>
-        The content of this property must be an ordered set where the first item is a URI with the value: <a href="https://www.w3.org/2018/credentials/v1">"https://www.w3.org/2018/credentials/v1"</a> (“base context”).<br>
-        The types stated in the "type" field MUST go from more abstract to more concrete, being "VerifiableCredential" the first type for all credentials. This is not explicitly stated by EBSI but it's useful in order to know the concrete type for each credential.
+        The content of this property must be an ordered set where the first item is a URI with the value: <a href="https://www.w3.org/2018/credentials/v1">"https://www.w3.org/2018/credentials/v1"</a> (“base context”).
     </td>
   </tr>
 
@@ -47,6 +46,8 @@ There are two types of Verifiable Attestation: Verifiable Attestation and Accred
     <td>
       Every Verifiable Credential must define its type.<br><br>
       The value of this property for a V-ID must be: 'VerifiableCredential', <s>'AccreditedVerifiableAttestation'</s>, 'VerifiableID'.
+      <br><br>
+      The types stated in the "type" field MUST go from more abstract to more concrete, being "VerifiableCredential" the first type for all credentials. This is not explicitly stated by EBSI but it's useful in order to know the concrete type for each credential.
     </td>
   </tr>
 
@@ -73,7 +74,7 @@ There are two types of Verifiable Attestation: Verifiable Attestation and Accred
     <td>dateTime</td>
     <td>
       The value of this property must be a combined date and time string.<br><br>
-      The “validFrom” property will be added to the W3C VC data model to allow a distinction between the date a VC was issued (“issued”) and the date a VC becomes valid (“validFrom”). It is not yet included in the official W3C VC data mode.<br><br>
+      The “validFrom” property will be added to the W3C VC data model to allow a distinction between the date a VC was issued (“issued”) and the date a VC becomes valid (“validFrom”). It is not yet included in the official W3C VC data model.<br><br>
       Format:  <a href="https://datatracker.ietf.org/doc/html/rfc3339">https://datatracker.ietf.org/doc/html/rfc3339</a>
     </td>
   </tr>
