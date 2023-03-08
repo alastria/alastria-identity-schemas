@@ -6,7 +6,6 @@
   "issuanceDate": "2021-11-01T00:00:00Z",
   "validFrom": "2021-11-01T00:00:00Z",
   "expirationDate": "2024-06-22T14:11:44Z",
-  "issued": "2020-06-22T14:11:44Z",
   "credentialSubject": {
     "id": "did:ebsi:00001235"
   },
