@@ -29,11 +29,6 @@
       "type": "string",
       "format": "uri"
     },
-    "issuanceDate": {
-      "description": "Property. Defines the date and time, when the Verifiable Attestation becomes valid",
-      "type": "string",
-      "format": "date-time"
-    },
     "issued": {
       "description": "Property. Defines when the Verifiable Attestation was issued",
       "type": "string",
