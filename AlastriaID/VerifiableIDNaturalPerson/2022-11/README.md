@@ -98,11 +98,23 @@ Verifiable ID is a Verifiable Attestation with the following top-level propertie
   </tr>
 
   <tr>
-    <td>nameAndFamilyNameAtBirth</td>
+    <td>nameAtBirth</td>
+    <td>
+      Defines the first name(s) of the credential subject at the time of their birth.
+    </td>
+    <td>string</td>
+    <td>
+      This property implements the eIDAS minimum data set. 
+    </td>
+    <td>
+      No
+    </td>
+  </tr>
+
+  <tr>
+    <td>familyNameAtBirth</td>
     <td>
       Defines the first and the family name(s) of the credential subject at the time of their birth.
-      <br><br>
-      Definition: <a href="http://mapping.semic.eu:81/vdm/about/html/http%3A%2F%2Fmapping.semic.eu%2Fvdm%2Fid%2Fcv%2Fc2fef50a5f2ca0ff1ac34a97028d34ae">Name and family name at Birth</a> 
     </td>
     <td>string</td>
     <td>
