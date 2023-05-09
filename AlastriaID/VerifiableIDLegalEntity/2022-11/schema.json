@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EBSI Legal Entity Verifiable ID",
+  "description": "Schema of an EBSI Verifiable ID for a legal entity",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../../VerifiableAttestation/2022-11/schema.json"
+    },
+    {
+      "properties": {
+        "credentialSubject": {
+          "description": "Property. Defines information about the subject that is described by the Verifiable ID",
+          "type": "object",
+          "properties": {
+            "legalPersonIdentifier": {
+              "description": "Property. National/Legal Identifier of Credential Subject (constructed by the sending Member State in accordance with the technical specifications for the purposes of cross-border identification and which is as persistent as possible in time)",
+              "type": "string"
+            },
+            "legalName": {
+              "description": "Property. Official legal name of Credential Subject",
+              "type": "string"
+            },
+            "legalAddress": {
+              "description": "Property. Official legal address of Credential Subject",
+              "type": "string"
+            },
+            "VATRegistration": {
+              "description": "Property. VAT number  of Credential Subject",
+              "type": "string"
+            },
+            "taxReference": {
+              "description": "Property. Official tax reference number of Credential Subject",
+              "type": "string"
+            },
+            "LEI": {
+              "description": "Property. Official legal entity identifier (LEI) of Credential Subject (referred to in Commission Implementing Regulation (EU) No 1247/2012)",
+              "type": "string"
+            },
+            "EORI": {
+              "description": "Property. Economic Operator Registration and Identification (EORI) of Credential Subject (referred to in Commission Implementing Regulation (EU) No 1352/2013)",
+              "type": "string"
+            },
+            "SEED": {
+              "description": "Property. System for Exchange of Excise Data (SEED) of Credential Subject (i.e. excise number provided in Article 2(12) of Council Regulation (EC) No 389/2012)",
+              "type": "string"
+            },
+            "SIC": {
+              "description": "Property. Standard Industrial Classification (SIC) of Credential Subject (Article 3(1) of Directive 2009/101/EC of the European Parliament and of the Council.)",
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "legalName"
+          ]
+        }
+      }
+    }
+  ]
+}
